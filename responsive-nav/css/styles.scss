@@ -2,6 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -11,7 +12,6 @@ html {
 
 #menu-trigger {
     text-align: right;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(27, 129, 143);
     display: none;
@@ -23,22 +23,21 @@ html {
 #main-menu {
     display: inline-block;
     width: 100%;
-    top: 0;
+    // top: 0;
     background-color: lightblue;
 
     ul {
         color: rgb(27, 129, 143);
-
         li {
             list-style: none;
             display: inline-block;
             margin-right: 20px;
-            font-family: Arial, Helvetica, sans-serif;
             text-transform: uppercase;
         }
     }
 }
 
+// Media Queries
 @media screen and (max-width: 480px) {
     #menu-trigger {
         display: block;
@@ -46,10 +45,14 @@ html {
     nav#main-menu {
         display: none;
     }
+    .nav-expanded {
+        display: block;
+    }
     #main-menu ul li {
         display: block;
         line-height: 60px;
         border-bottom: 2px solid rgb(196, 234, 247);
+
         &:last-child {
             border-bottom: none;
         }
