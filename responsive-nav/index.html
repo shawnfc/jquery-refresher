@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Navigation</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+</head>
+
+<body>
+    <span id="menu-trigger">MENU</span>
+    <nav id="main-menu">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p>Amet nostrud anim nostrud occaecat incididunt consectetur in. Ut officia esse qui nisi quis irure velit
+            adipisicing amet enim labore laborum dolore magna. Ex ex voluptate excepteur do officia ea incididunt fugiat
+            voluptate irure nostrud irure excepteur. Qui amet ad tempor incididunt culpa pariatur qui consectetur Lorem.
+            Aliqua aute excepteur consectetur sunt pariatur enim quis occaecat occaecat adipisicing irure eu incididunt
+            dolore.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#menu-trigger').click(function() {
+                $('#main-menu').slideToggle();
+            })
+        });
+    </script>
+</body>
+
+</html>
