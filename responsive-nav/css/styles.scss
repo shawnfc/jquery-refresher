@@ -20,6 +20,8 @@ html {
     cursor: pointer;
 }
 
+
+
 #main-menu {
     display: inline-block;
     width: 100%;
@@ -38,6 +40,13 @@ html {
 }
 
 // Media Queries
+@media screen and (min-width: 481px) {
+    nav#main-menu {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     #menu-trigger {
         display: block;
@@ -45,9 +54,7 @@ html {
     nav#main-menu {
         display: none;
     }
-    .nav-expanded {
-        display: block;
-    }
+
     #main-menu ul li {
         display: block;
         line-height: 60px;

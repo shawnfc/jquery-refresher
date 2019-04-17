@@ -37,15 +37,19 @@ html {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 481px) {
+  nav#main-menu {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   #menu-trigger {
     display: block;
   }
   nav#main-menu {
     display: none;
-  }
-  .nav-expanded {
-    display: block;
   }
   #main-menu ul li {
     display: block;
