@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>JQuery Selectors</title>
+    <title>JQuery Events</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,10 +15,10 @@
 
 <body>
     <div class="container">
-        <h2>Selectors Using jQuey</h2>
+        <h2>Events Using jQuey</h2>
 
         <p>This is a paragraph outside of a div.</p>
-            <p>This is another paragraph outside the div.</p>
+        <p>This is another paragraph outside the div.</p>
 
         <div id="firstDiv" class="myDivs">
             <p>This is the first paragraph</p>
@@ -37,15 +37,17 @@
             </ul>
         </div>
 
-        <button id="btn1" onclick="fn1()">Click Me</button>
+        <button id="btn1" class="btn btn-primary" onclick="fn1()">Click Me</button>
     </div>
 </body>
 
 <script src="js/jquery.js"></script>
 <script>
-    function fn1() {
-        $('li:odd').fadeToggle(1500);
-    }
+    $(document).ready(function () {
+        $('button').click(function () {
+            $('p').fadeToggle();
+        })
+    });
 </script>
 
 </html>
