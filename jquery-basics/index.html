@@ -15,12 +15,26 @@
 
 <body>
     <div class="container">
-        <h2 id="firstH2" class="myHeading">Selectors Using jQuey</h2>
-        <h2 class="myHeading">Selectors Using jQuey</h2>
         <h2>Selectors Using jQuey</h2>
 
-        <div class="myHeading">
-            <p>This is paragraph</p>
+        <p>This is a paragraph outside of a div.</p>
+            <p>This is another paragraph outside the div.</p>
+
+        <div id="firstDiv" class="myDivs">
+            <p>This is the first paragraph</p>
+            <p>This is another paragraph</p>
+
+        </div>
+        <div id="secondDiv" class="myDivs">
+            <p>This is the second paragraph</p>
+        </div>
+        <div id="thirdDiv" class="myDivs">
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
         </div>
 
         <button id="btn1" onclick="fn1()">Click Me</button>
@@ -30,7 +44,7 @@
 <script src="js/jquery.js"></script>
 <script>
     function fn1() {
-        $('.myHeading').fadeToggle();
+        $('li:odd').fadeToggle(1500);
     }
 </script>
 
