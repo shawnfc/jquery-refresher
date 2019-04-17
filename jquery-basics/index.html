@@ -2,17 +2,35 @@
 <html>
 
 <head>
+    <title>JQuery Selectors</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h2 id="heading1">Setting Up jQuey</h2>
-    <button id="btn1" onclick="fn1()">Click Me</button>
+    <div class="container">
+        <h2 id="firstH2" class="myHeading">Selectors Using jQuey</h2>
+        <h2 class="myHeading">Selectors Using jQuey</h2>
+        <h2>Selectors Using jQuey</h2>
+
+        <div class="myHeading">
+            <p>This is paragraph</p>
+        </div>
+
+        <button id="btn1" onclick="fn1()">Click Me</button>
+    </div>
 </body>
+
 <script src="js/jquery.js"></script>
 <script>
     function fn1() {
-        $('#heading1').fadeToggle(1000);
+        $('.myHeading').fadeToggle();
     }
 </script>
 
