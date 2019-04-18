@@ -14,19 +14,20 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Events Using jQuey</h2>
+    <section class="container">
+        <h2>Effects Using jQuey</h2>
 
         <p>This is a paragraph outside of a div.</p>
-        <p>This is another paragraph outside the div.</p>
+        <button id="btn1" class="btn btn-primary">Button 1</button>
+        <button id="btn2" class="btn btn-primary">Button 2</button>
+        <button id="btn3" class="btn btn-primary">Button 3</button>
 
         <div id="firstDiv" class="myDivs">
             <p>This is the first paragraph</p>
             <p>This is another paragraph</p>
-
         </div>
         <div id="secondDiv" class="myDivs">
-            <p>This is the second paragraph</p>
+            <p>This is the third paragraph</p>
         </div>
         <div id="thirdDiv" class="myDivs">
             <ul>
@@ -36,27 +37,32 @@
                 <li>List item 4</li>
             </ul>
         </div>
+        <div>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
 
-        <button id="btn1" class="btn btn-primary" onclick="fn1()">Button 1</button>
-        <button id="btn2" class="btn btn-primary" onclick="fn1()">Button 2</button>
-    </div>
+        
+    </section>
 </body>
 
 <script src="js/jquery.js"></script>
 <script>
     $(document).ready(function () {
 
-        $('#btn1').mouseenter(fn1);
-        $('#btn2').mouseenter(fn2);
-
-        
-        function fn1() {
-            $('#secondDiv').fadeOut();
-        }
-        function fn2() {
-            $('#secondDiv').fadeIn();
-        }
-        
+        $('#btn1').click(function () {
+            $('#firstDiv').fadeOut('slow');
+        });
+        $('#btn2').click(function () {
+            $('#firstDiv').fadeIn(2000);
+        });
+        $('#btn3').click(function () {
+            $('#firstDiv').fadeToggle();
+        });
 
     });
 </script>
