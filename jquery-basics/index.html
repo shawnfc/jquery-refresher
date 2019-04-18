@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>JQuery Events</title>
+    <title>JQuery Animate</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,7 +15,7 @@
 
 <body>
     <section class="container">
-        <h2>Effects Using jQuey</h2>
+        <h2>Animation Using jQuey</h2>
 
         <p>This is a paragraph outside of a div.</p>
         <button id="btn1" class="btn btn-primary">Button 1</button>
@@ -37,13 +37,8 @@
                 <li>List item 4</li>
             </ul>
         </div>
-        <div>
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-                <li>List item 3</li>
-                <li>List item 4</li>
-            </ul>
+        <div class="myCube">
+            <p>This is a cube.</p>
         </div>
 
         
@@ -54,15 +49,14 @@
 <script>
     $(document).ready(function () {
 
-        $('#btn1').click(function () {
-            $('#firstDiv').fadeOut('slow');
-        });
-        $('#btn2').click(function () {
-            $('#firstDiv').fadeIn(2000);
-        });
-        $('#btn3').click(function () {
-            $('#firstDiv').fadeToggle();
-        });
+        $('#btn3').click(function() {
+            $('.myCube').animate({
+                left: '150px',
+                opacity: 1,
+                width: '200px',
+                height: '200px'
+            }, 1000)
+        })
 
     });
 </script>
