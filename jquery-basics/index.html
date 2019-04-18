@@ -37,16 +37,27 @@
             </ul>
         </div>
 
-        <button id="btn1" class="btn btn-primary" onclick="fn1()">Click Me</button>
+        <button id="btn1" class="btn btn-primary" onclick="fn1()">Button 1</button>
+        <button id="btn2" class="btn btn-primary" onclick="fn1()">Button 2</button>
     </div>
 </body>
 
 <script src="js/jquery.js"></script>
 <script>
     $(document).ready(function () {
-        $('button').click(function () {
-            $('p').fadeToggle();
-        })
+
+        $('#btn1').mouseenter(fn1);
+        $('#btn2').mouseenter(fn2);
+
+        
+        function fn1() {
+            $('#secondDiv').fadeOut();
+        }
+        function fn2() {
+            $('#secondDiv').fadeIn();
+        }
+        
+
     });
 </script>
 
