@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>JQuery Animate</title>
+    <title>JQuery Callbacks</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,12 +15,10 @@
 
 <body>
     <section class="container">
-        <h2>Animation Using jQuey</h2>
+        <h2>Callbacks Using jQuey</h2>
 
         <p>This is a paragraph outside of a div.</p>
-        <button id="btn1" class="btn btn-primary">Button 1</button>
-        <button id="btn2" class="btn btn-primary">Button 2</button>
-        <button id="btn3" class="btn btn-primary">Button 3</button>
+        <button id="fadeToggle" class="btn btn-primary">Toggle</button>
 
         <div id="firstDiv" class="myDivs">
             <p>This is the first paragraph</p>
@@ -29,19 +27,7 @@
         <div id="secondDiv" class="myDivs">
             <p>This is the third paragraph</p>
         </div>
-        <div id="thirdDiv" class="myDivs">
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-                <li>List item 3</li>
-                <li>List item 4</li>
-            </ul>
-        </div>
-        <div class="myCube">
-            <p>This is a cube.</p>
-        </div>
 
-        
     </section>
 </body>
 
@@ -49,14 +35,17 @@
 <script>
     $(document).ready(function () {
 
-        $('#btn3').click(function() {
-            $('.myCube').animate({
-                left: '150px',
-                opacity: 1,
-                width: '200px',
-                height: '200px'
-            }, 1000)
-        })
+        $('#fadeToggle').click(function () {
+            $('#firstDiv').fadeToggle(2000, message);
+        });
+
+        $('#firstDiv').click(function() {
+            $(this).slideUp().slideDown().fadeOut().fadeIn();
+        });
+
+        var message = function () {
+            alert('It is faded!');
+        }
 
     });
 </script>
