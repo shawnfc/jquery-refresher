@@ -10,43 +10,34 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    <!-- custom styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <section class="container">
-        <h2>Callbacks Using jQuey</h2>
-
-        <p>This is a paragraph outside of a div.</p>
-        <button id="fadeToggle" class="btn btn-primary">Toggle</button>
-
-        <div id="firstDiv" class="myDivs">
-            <p>This is the first paragraph</p>
-            <p>This is another paragraph</p>
-        </div>
-        <div id="secondDiv" class="myDivs">
-            <p>This is the third paragraph</p>
-        </div>
+        <h3>jQuery UI</h3>
+        
+        
 
     </section>
 </body>
 
+<!-- jQuery -->
 <script src="js/jquery.js"></script>
+
+<!-- jQuery UI -->
+<script src="jquery-ui/jquery-ui.js"></script>
 <script>
     $(document).ready(function () {
-
-        $('#fadeToggle').click(function () {
-            $('#firstDiv').fadeToggle(2000, message);
-        });
-
-        $('#firstDiv').click(function() {
-            $(this).slideUp().slideDown().fadeOut().fadeIn();
-        });
-
-        var message = function () {
-            alert('It is faded!');
-        }
-
+        
+        
     });
 </script>
 
